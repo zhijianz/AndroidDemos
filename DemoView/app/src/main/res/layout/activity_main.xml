@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOVE VIEW"
+            android:id="@+id/btn_move_view"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CANVAS DRAW"
+            android:id="@+id/btn_canvas_draw"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SCROLL VIEW"
+            android:id="@+id/btn_scroll_view"/>
+
+        <View
+            android:layerType="software"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/common_dash_line"/>
+    </LinearLayout>
+</ScrollView>

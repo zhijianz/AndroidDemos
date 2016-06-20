@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <com.example.zzj.demoview.views.CoordinateViewGroup
+        android:id="@+id/cl_container"
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:background="#d3c0d99c">
+
+        <com.example.zzj.demoview.views.ScrollLayout
+            android:id="@+id/v_sub"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+    </com.example.zzj.demoview.views.CoordinateViewGroup>
+
+    <Switch
+        android:id="@+id/s_operate_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="5dp"
+        android:text="Operate SubView" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/btn_scroll_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="SCROLL_LEFT" />
+
+        <Button
+            android:id="@+id/btn_scroll_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="SCROLL_RIGHT" />
+
+        <Button
+            android:id="@+id/btn_translate_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="TRANSLATE_LEFT" />
+
+        <Button
+            android:id="@+id/btn_translate_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="TRANSLATE_RIGHT" />
+
+        <Button
+            android:id="@+id/btn_x_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="X_LEFT" />
+
+        <Button
+            android:id="@+id/btn_x_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Y_RIGHT" />
+
+        <Button
+            android:id="@+id/btn_layout_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="LAYOUT_LEFT" />
+
+        <Button
+            android:id="@+id/btn_layout_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="LAYOUT_RIGHT" />
+
+        <Button
+            android:id="@+id/btn_request_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="REQUEST_LEFT" />
+
+        <Button
+            android:id="@+id/btn_request_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="REQUEST_RIGHT" />
+    </GridLayout>
+</LinearLayout>

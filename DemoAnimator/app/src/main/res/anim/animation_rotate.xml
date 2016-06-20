@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:pivotX="50%p"
+    android:pivotY="50%p"
+    android:fromDegrees="0"
+    android:toDegrees="360"
+    android:repeatMode="restart"
+    android:repeatCount="-1"
+    android:duration="5500"
+    android:interpolator="@android:anim/bounce_interpolator"/>
+

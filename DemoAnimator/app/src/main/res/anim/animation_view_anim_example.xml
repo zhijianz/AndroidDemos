@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="5000"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:repeatMode="reverse"
+    android:shareInterpolator="true">
+
+    <rotate
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="infinite"
+        android:toDegrees="360" />
+    <translate
+        android:repeatCount="infinite"
+        android:toXDelta="300%"
+        android:toYDelta="300%" />
+    <alpha
+        android:fromAlpha="1"
+        android:repeatCount="infinite"
+        android:toAlpha="0.2" />
+    <scale
+        android:fromXScale="0.8"
+        android:fromYScale="0.8"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="infinite"
+        android:toXScale="1.2"
+        android:toYScale="1.2" />
+</set>
+
+
+    <!--在这里有一堆神奇的东西-->
+    <!--1.位置相关的取值有三种不同的类型：整数值表示一定数量的像素/百分数表示View尺寸的百分比/百分数P表示父容器尺寸的百分比-->
+    <!--2.repeatCount 要放置在每个具体的动画中，直接在 set 中设置不会有任何效果-->
+    <!--3.rotate 使用的是上一帧动画位置中的计算出来的中心点，所以如果 translate 在 rotate 之前运行就会导致中心点一直都不是 View 当前的中心点-->
+    <!--从而出现螺旋线的运动轨迹-->

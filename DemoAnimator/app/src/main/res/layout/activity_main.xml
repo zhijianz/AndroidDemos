@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layoutAnimation="@anim/animation_layout_anim"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.zhijianz.demoanimator.MainActivity">
+
+    <Button
+        android:id="@+id/btn_view_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VIEW ANIMATOR" />
+
+    <Button
+        android:id="@+id/btn_frame_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FRAME ANIMATOR" />
+
+    <Button
+        android:id="@+id/btn_attribute_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ATTRIBUTE ANIMATOR" />
+
+    <Button
+        android:id="@+id/btn_layout_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LAYOUT ANIMATION" />
+
+    <Button
+        android:id="@+id/btn_animation_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANIMATION COLLECTION" />
+
+    <Button
+        android:id="@+id/btn_all_interpolators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALL INTERPOLATORS" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test web"
+        android:id="@+id/btn_web"/>
+</LinearLayout>
