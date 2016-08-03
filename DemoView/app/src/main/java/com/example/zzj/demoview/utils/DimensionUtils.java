@@ -1,6 +1,7 @@
 package com.example.zzj.demoview.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.Display;
 
 /**
@@ -15,5 +16,10 @@ public class DimensionUtils {
     public static int getScreenHeight(Activity activity){
         Display display = activity.getWindowManager().getDefaultDisplay();
         return display.getHeight();
+    }
+
+    public static int Dp2Px(Context context, float dpValue){
+        float density = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * density + .5f);
     }
 }

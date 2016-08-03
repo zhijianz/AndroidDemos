@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewGroup;
 
 /**
@@ -33,47 +32,37 @@ public class ScrollLayout extends ViewGroup {
     }
 
     private void init(){
-        View child = obtainChildView();
-        child.setBackgroundColor(Color.BLACK);
+        ColorView child = obtainChildView(Color.BLACK);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.DKGRAY);
+        child = obtainChildView(Color.DKGRAY);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.GRAY);
+        child = obtainChildView(Color.GRAY);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.LTGRAY);
+        child = obtainChildView(Color.LTGRAY);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.RED);
+        child = obtainChildView(Color.RED);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.GREEN);
+        child = obtainChildView(Color.GREEN);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.BLUE);
+        child = obtainChildView(Color.BLUE);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.YELLOW);
+        child = obtainChildView(Color.YELLOW);
         addView(child);
 
-        child = obtainChildView();
-        child.setBackgroundColor(Color.CYAN);
+        child = obtainChildView(Color.CYAN);
         addView(child);
     }
 
-    private View obtainChildView(){
-        View child = new View(getContext());
-        ViewGroup.LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        child.setLayoutParams(params);
+    private ColorView obtainChildView(int color){
+        ColorView child = new ColorView(getContext());
+        child.setColor(color);
         return child;
     }
 
@@ -123,5 +112,6 @@ public class ScrollLayout extends ViewGroup {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         Log.i(TAG, "ScrollLayout_onMeasure");
+        measureChildren(widthMeasureSpec, heightMeasureSpec);
     }
 }

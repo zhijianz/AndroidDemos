@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
+import com.example.zzj.demoview.utils.DimensionUtils;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -95,8 +97,11 @@ public class CanvasDrawActivity extends AppCompatActivity {
     @OnClick(R.id.btn_draw_line)
     void onDrawLineBtnClick(){
         mPaint.setStyle(Paint.Style.STROKE);
-        float[] pts = {0, 0, mBitmapWidth, mBitmapHeight, mBitmapWidth, 0, 0, mBitmapHeight};
-        mCanvas.drawLines(pts, mPaint);
+//        float[] pts = {0, 0, mBitmapWidth, mBitmapHeight, mBitmapWidth, 0, 0, mBitmapHeight};
+//        mCanvas.drawLines(pts, mPaint);
+        mPaint.setStrokeWidth(DimensionUtils.Dp2Px(this, 10));
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
+        mCanvas.drawLine(0, 0, 300, 300, mPaint);
         mImageView.invalidate();
     }
 

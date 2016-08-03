@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_recent"
+        android:icon="@drawable/ic_update_white_24dp"
+        android:title="Recent"/>
+    <item
+        android:id="@+id/item_location"
+        android:icon="@drawable/ic_location_on_white_24dp"
+        android:title="Location"/>
+    <item
+        android:id="@+id/item_favorite"
+        android:icon="@drawable/ic_favorite_white_24dp"
+        android:title="Favorite"/>
+    <item
+        android:id="@+id/item_dinning"
+        android:icon="@drawable/ic_local_dining_white_24dp"
+        android:title="Dinning"/>
+</menu>

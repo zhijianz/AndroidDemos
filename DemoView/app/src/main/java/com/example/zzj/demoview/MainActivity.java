@@ -29,4 +29,9 @@ public class MainActivity extends AppCompatActivity {
     void onScrollViewBtnClick(){
         ScrollActivity.navigateFrom(this);
     }
+
+    @OnClick(R.id.btn_level_view)
+    void onLevelClick(){
+        LevelActivity.naviageFrom(this);
+    }
 }

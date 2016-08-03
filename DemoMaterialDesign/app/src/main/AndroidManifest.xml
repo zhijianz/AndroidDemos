@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zzj.demoview">
+    package="com.example.zzj.demomaterialdesign">
 
     <application
         android:allowBackup="true"
@@ -15,10 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MoveViewActivity" />
-        <activity android:name=".CanvasDrawActivity" />
-        <activity android:name=".ScrollActivity" />
-        <activity android:name=".LevelActivity"></activity>
     </application>
 
 </manifest>
