@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="CustomViewStyle">@style/CustomViewTheme</item>
+        <item name="attr_1">From Theme</item>
+    </style>
+    
+    <style name="CustomViewTheme">
+        <item name="attr_1">From Theme.attr</item>
+    </style>
+
+    <style name="CustomViewDefault">
+        <item name="attr_1">From Style</item>
     </style>
 
 </resources>
