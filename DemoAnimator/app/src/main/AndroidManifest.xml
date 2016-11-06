@@ -29,7 +29,6 @@
 
         <activity android:name=".CollectionActivity" />
         <activity android:name=".AllInterpolatorsActivity" />
-        <activity android:name=".WebActivity"></activity>
     </application>
 
 </manifest>

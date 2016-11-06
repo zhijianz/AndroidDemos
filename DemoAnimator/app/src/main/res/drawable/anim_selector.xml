@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="lollipop">
+    <item
+        android:id="@+id/checking"
+        android:drawable="@mipmap/a1"
+        android:state_checked="false" />
+    <item
+        android:id="@+id/checked"
+        android:drawable="@mipmap/a2"
+        android:state_checked="true" />
+    <transition
+        android:fromId="@id/checking"
+        android:toId="@id/checked">
+        <animation-list>
+            <item
+                android:drawable="@mipmap/a1"
+                android:duration="100" />
+            <item
+                android:drawable="@mipmap/a2"
+                android:duration="100" />
+            <item
+                android:drawable="@mipmap/a3"
+                android:duration="100" />
+            <item
+                android:drawable="@mipmap/a4"
+                android:duration="100" />
+            <item
+                android:drawable="@mipmap/a5"
+                android:duration="100" />
+            <item
+                android:drawable="@mipmap/a6"
+                android:duration="100" />
+        </animation-list>
+    </transition>
+</animated-selector>

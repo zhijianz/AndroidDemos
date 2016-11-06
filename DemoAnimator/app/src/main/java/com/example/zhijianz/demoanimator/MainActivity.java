@@ -41,9 +41,4 @@ public class MainActivity extends AppCompatActivity {
     void onAllInterpolatorClick(){
         startActivity(new Intent(this, AllInterpolatorsActivity.class));
     }
-
-    @OnClick(R.id.btn_web)
-    void onWebClick(){
-        startActivity(new Intent(this, WebActivity.class));
-    }
 }
