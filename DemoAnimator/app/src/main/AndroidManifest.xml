@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewAnimationActivity" />
-        <activity android:name=".FrameAnimationActivity" />
+        <activity android:name=".DrawableAnimationActivity" />
         <activity android:name=".LayoutAnimActivity" />
         <activity android:name=".AttributeAnimActivity" />
         <!--

@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--custom window style-->
+    <style name="CustomWindowStyle">
+        <!--是否悬浮在现有界面上层，如果false会替换现有-->
+        <item name="android:windowIsFloating">true</item>
+        <!--软键盘的显示模式-->
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <!--是否出现蒙层-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--蒙层透明度-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--window.DecorView的背景，mDecor.setWindowBackground-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--window的前景，mDecor.setWindowFrame-->
+        <item name="android:windowFrame">@color/transparent</item>
+    </style>
+
+</resources>

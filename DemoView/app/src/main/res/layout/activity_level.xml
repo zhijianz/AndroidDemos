@@ -8,13 +8,35 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.zzj.demoview.LevelActivity">
+
     <com.example.zzj.demoview.views.PersonLevelView
         android:id="@+id/plv_level"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
     <com.example.zzj.demoview.views.PersonGrowthProgressBar
-        android:layerType="software"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layerType="software" />
+
+    <FrameLayout
+        android:id="@+id/fl_protect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/protect"
+            android:layout_width="@dimen/protect_btn_size"
+            android:layout_height="@dimen/protect_btn_size"
+            android:layout_below="@id/plv_level"
+            android:layout_gravity="center"
+            android:background="@drawable/protect_anim" />
+
+        <com.example.zzj.demoview.views.TimerProgressView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
 </RelativeLayout>

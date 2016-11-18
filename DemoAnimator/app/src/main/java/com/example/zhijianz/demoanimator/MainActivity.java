@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_frame_animator)
     void onFrameAnimatorClick(){
-        startActivity(new Intent(this, FrameAnimationActivity.class));
+        startActivity(new Intent(this, DrawableAnimationActivity.class));
     }
 
     @OnClick(R.id.btn_layout_anim)

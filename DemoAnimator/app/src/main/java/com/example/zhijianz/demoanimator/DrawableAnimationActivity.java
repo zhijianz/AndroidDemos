@@ -1,6 +1,7 @@
 package com.example.zhijianz.demoanimator;
 
 import android.annotation.TargetApi;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FrameAnimationActivity extends AppCompatActivity {
+public class DrawableAnimationActivity extends AppCompatActivity {
 
     private AnimationDrawable mAnimDrawable;
 
@@ -55,5 +56,14 @@ public class FrameAnimationActivity extends AppCompatActivity {
         drawable.setOneShot(false);
         mFrameIV.setBackground(drawable);
         drawable.start();
+    }
+
+    @OnClick(R.id.rotate)
+    void onRotate(ImageView view){
+        Animatable drawable = (Animatable) view.getDrawable();
+        if (!drawable.isRunning())
+            drawable.start();
+        else
+            drawable.stop();
     }
 }
