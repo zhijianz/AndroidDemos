@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        getWindow().getDecorView().findViewById(android.R.id.content);
     }
 
     @OnClick(R.id.custom_dialog)

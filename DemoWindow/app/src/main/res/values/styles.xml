@@ -13,7 +13,7 @@
         <!--是否悬浮在现有界面上层，如果false会替换现有-->
         <item name="android:windowIsFloating">true</item>
         <!--软键盘的显示模式-->
-        <item name="android:windowSoftInputMode">adjustPan</item>
+        <!--<item name="android:windowSoftInputMode">adjustPan</item>-->
         <!--是否出现蒙层-->
         <item name="android:backgroundDimEnabled">false</item>
         <!--蒙层透明度-->
