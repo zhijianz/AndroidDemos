@@ -9,11 +9,8 @@
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:src="@drawable/mission_dialog_bg"/>
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn"/>
-    </LinearLayout>
+</LinearLayout>

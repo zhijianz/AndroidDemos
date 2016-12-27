@@ -18,7 +18,9 @@
         <activity android:name=".MoveViewActivity" />
         <activity android:name=".CanvasDrawActivity" />
         <activity android:name=".ScrollActivity" />
-        <activity android:name=".LevelActivity"></activity>
+        <activity android:name=".LevelActivity" />
+        <activity android:name=".TypefaceActivity" />
+        <activity android:name=".AutoFitActivity"></activity>
     </application>
 
 </manifest>

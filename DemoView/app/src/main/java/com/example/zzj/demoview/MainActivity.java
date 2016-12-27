@@ -34,4 +34,14 @@ public class MainActivity extends AppCompatActivity {
     void onLevelClick(){
         LevelActivity.naviageFrom(this);
     }
+
+    @OnClick(R.id.btn_typeface)
+    void onTypefaceClick(){
+        TypefaceActivity.navigateFrom(this);
+    }
+
+    @OnClick(R.id.btn_auto_fit)
+    void onAutoFitClick(){
+        AutoFitActivity.navigateFrom(this);
+    }
 }

@@ -32,6 +32,18 @@
             android:layout_height="wrap_content"
             android:text="LEVEL VIEW" />
 
+        <Button
+            android:id="@+id/btn_typeface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TYPEFACE"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AUTO FIX TEXT"
+            android:id="@+id/btn_auto_fit"/>
+
         <com.example.zzj.demoview.views.PersonGrowthProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -42,5 +54,6 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bg_rect"
             android:text="1234"/>
+
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_typeface"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+        <TextView
+            style="@style/TypefaceText"
+            android:text="sans-serif    中文显示"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            style="@style/TypefaceText"
+            android:text="sans-serif-light    中文显示"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            style="@style/TypefaceText"
+            android:text="sans-serif-condensed    中文显示"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            style="@style/TypefaceText"
+            android:text="sans-serif-thin    中文显示"
+            android:fontFamily="sans-serif-thin"/>
+
+        <TextView
+            style="@style/TypefaceText"
+            android:text="sans-serif-medium    中文显示"
+            android:fontFamily="sans-serif-medium"/>
+
+    </LinearLayout>
+</ScrollView>
