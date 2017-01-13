@@ -1,6 +1,7 @@
 package com.example.zzj.demowindow;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.zzj.demowindow.dialogs.DialogA;
+import com.example.zzj.demowindow.dialogs.DialogB;
 import com.example.zzj.demowindow.views.IMEView;
 
 import butterknife.ButterKnife;
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     float mLastY;
     WindowManager.LayoutParams moveWindowParams;
     IMEView mImeView;
+    Button mTopView;
+    DialogA a;
+    DialogB b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +110,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mImeView = new IMEView(this);
+        mTopView = new Button(this);
+        ViewGroup.LayoutParams topParams = new ViewGroup.LayoutParams(100, 100);
+        mTopView.setLayoutParams(topParams);
+        mTopView.setText("Top View");
+        mTopView.setBackgroundColor(Color.BLUE);
+
+        a = new DialogA(this);
+        b = new DialogB(this);
     }
 
     @OnClick(R.id.btn_add)
@@ -201,5 +215,42 @@ public class MainActivity extends AppCompatActivity {
         }else {
             getWindowManager().removeView(mImeView);
         }
+    }
+
+    @OnClick(R.id.btn_top)
+    void onTopClick(){
+        if (mTopView.getParent() == null){
+            WindowManager.LayoutParams params =
+                    new WindowManager.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_APPLICATION_ATTACHED_DIALOG, 0, PixelFormat.TRANSPARENT);
+            params.flags |= WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+            params.flags |= WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
+            getWindowManager().addView(mTopView, params);
+        }else {
+            getWindowManager().removeView(mTopView);
+        }
+    }
+
+    @OnClick(R.id.dialog_a)
+    void onDialogAClick(){
+        if (a.isShowing()){
+            a.hide();
+        }else {
+            a.show();
+        }
+    }
+
+    @OnClick(R.id.dialog_b)
+    void onDialogBClick(){
+        if (b.isShowing()){
+            b.hide();
+        }else {
+            b.show();
+        }
+    }
+
+    @OnClick(R.id.btn_drawable)
+    void onDrawableClick(){
+        Intent intent = new Intent(this, DrawableActivity.class);
+        startActivity(intent);
     }
 }
