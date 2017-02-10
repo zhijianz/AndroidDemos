@@ -32,7 +32,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public final class ItemPool extends ArrayList<Object> {
     private static final AtomicInteger ID_COUNTER = new AtomicInteger(0);
 
-    private final HashMap<Class, ItemType> mapOfType = new HashMap<>();
+    private final HashMap<Class, ItemType> mapOfType = new HashMap<>();     // 数据类型和ItemType之间的映射
     private final SparseArray<Class<? extends Item>> mapOfItemClass = new SparseArray<>();
     private final ItemAdapter internalAdapter = new ItemAdapter(this);
 
@@ -45,6 +45,10 @@ public final class ItemPool extends ArrayList<Object> {
         mapOfItemClass.put(type.TYPE_ID, itemClass);
     }
 
+    /**
+     * 希望通过这函数实现onItemClick的接口
+     * @param handler
+     */
     public void onEvent(ItemEventHandler handler) {
         Collection<ItemType> itemTypes = mapOfType.values();
 

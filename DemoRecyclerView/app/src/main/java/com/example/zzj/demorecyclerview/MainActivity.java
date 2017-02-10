@@ -8,6 +8,7 @@ import com.example.zzj.demorecyclerview.gank.view.WelfareActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.item_pool)
     void onItemPoolClick(){
+        Timber.d("onItemPoolClick, args: %s", "Timber");
         Intent intent = new Intent(this, WelfareActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.sticky_header)
+    void onStickyHeaderClick(){
+        Timber.d("onStickyHeaderClick");
     }
 }

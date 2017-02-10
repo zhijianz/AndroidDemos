@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zzj.demorecyclerview">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".common.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gank.view.WelfareActivity"></activity>
+        <activity android:name=".gank.view.WelfareActivity" />
+        <activity android:name=".stickyheader.StickyHeaderActivity"></activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

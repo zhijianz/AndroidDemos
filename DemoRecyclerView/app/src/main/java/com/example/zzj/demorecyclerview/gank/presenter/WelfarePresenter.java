@@ -2,7 +2,7 @@ package com.example.zzj.demorecyclerview.gank.presenter;
 
 import com.example.zzj.demorecyclerview.common.IPresenter;
 import com.example.zzj.demorecyclerview.gank.bean.WelfareResult;
-import com.example.zzj.demorecyclerview.gank.model.WelfareModel;
+import com.example.zzj.demorecyclerview.gank.model.GankModel;
 import com.example.zzj.demorecyclerview.gank.view.IWelfareView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -14,12 +14,12 @@ import org.greenrobot.eventbus.ThreadMode;
  */
 
 public class WelfarePresenter extends IPresenter<IWelfareView> {
-    private WelfareModel mModel;
+    private GankModel mModel;
 
     @Override
     public void register(IWelfareView iWelfareView) {
         super.register(iWelfareView);
-        mModel = WelfareModel.instance();
+        mModel = GankModel.instance(WelfareResult.class, GankModel.TYPE_WELFARE);
         EventBus.getDefault().register(this);
     }
 

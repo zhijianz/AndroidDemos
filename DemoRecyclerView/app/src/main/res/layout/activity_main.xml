@@ -8,5 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/item_pool"
-        android:text="ITEM_POOL"/>
+        android:text="WELFARE"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sticky_header"
+        android:text="STICKY HEADER"/>
 </LinearLayout>

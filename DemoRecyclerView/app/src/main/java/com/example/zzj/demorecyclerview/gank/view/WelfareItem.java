@@ -33,7 +33,10 @@ public class WelfareItem extends Item<GankBean> {
         ButterKnife.bind(this, root);
         RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) root.getLayoutParams();
         params.width = Utils.getScreenWidth(parent.getContext()) / 3;
-        params.height = RecyclerView.LayoutParams.WRAP_CONTENT;
+        params.height = Utils.getScreenWidth(parent.getContext()) / 3;
+        img.getLayoutParams().width = params.width;
+        img.getLayoutParams().height = params.height;
+        img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         return root;
     }
 

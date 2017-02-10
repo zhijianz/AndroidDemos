@@ -34,6 +34,7 @@ public class WelfareActivity extends AppCompatActivity implements IWelfareView, 
     }
 
     void initRecyclerView(){
+//        mRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mRecycler.setLayoutManager(new GridLayoutManager(this, 3));
         mPool = new ItemPool();
         mPool.addType(WelfareItem.class);
